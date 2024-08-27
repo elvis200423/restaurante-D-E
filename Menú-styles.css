@@ -1,0 +1,254 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+}
+
+/* Navegación */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #222;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav .logo {
+    height: 50px;
+}
+
+/* Estilos del nombre de la sección */
+.portfolio-name h1 {
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    margin: 10px 0;
+    font-size: 2.5em;
+}
+
+.div {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Estilos del menú */
+.menu-section {
+    padding: 20px;
+    background-color: #3f3e3e; /* Fondo base oscuro */
+    position: relative;
+    overflow: hidden;
+    z-index: 1; /* Asegura que el contenido esté por encima del efecto de fondo */
+}
+
+.menu-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(29, 29, 29, 0.3) 25%, transparent 25%);
+    background-size: 100px 100px;
+    animation: rotateBackgroundMenu 20s linear infinite;
+    z-index: -1; /* Envía el efecto detrás del contenido */
+}
+
+@keyframes rotateBackgroundMenu {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.menu-section h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #fff; /* Mantén el color del texto claro para contraste */
+    z-index: 2; /* Asegura que el texto esté por encima del efecto */
+}
+
+.menu-item {
+    z-index: 2; /* Asegura que los elementos del menú estén por encima del fondo */
+}
+
+.menu-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-column {
+    width: 48%;
+}
+
+.menu-category {
+    margin-bottom: 40px;
+}
+
+/* Cambia la tipografía a 'Times New Roman' para los títulos */
+.menu-category h3 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 2em; /* Tamaño de fuente ligeramente más grande */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.menu-items-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.menu-item {
+    width: 30%; /* Tamaño ajustado para agrandar los ítems */
+    margin: 20px 0;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px; /* Bordes curvos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item img {
+    width: 300px; /* Agranda las imágenes */
+    height: 100px;
+    border-radius: 10px;
+    object-fit: cover; /* Mantiene la proporción de las imágenes */
+}
+
+.menu-item h4 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.menu-item p {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.2em;
+    color: #666;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .menu-item {
+        width: 90%; /* En pantallas pequeñas, los elementos ocupan más espacio */
+    }
+}
+
+.menu-item img {
+    width: 120px; /* Ajuste de tamaño en pantallas pequeñas */
+    height: 120px;
+}
+
+
+/* Sección del mapa */
+.map-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.map-container iframe {
+    width: 80%;
+    height: 300px;
+    border: 0;
+}
+
+/* Pie de página */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 8px 8px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-content::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 20%, transparent 20%);
+    background-size: 50px 50px;
+    animation: rotateBackground 30s linear infinite;
+}
+
+@keyframes rotateBackground {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.contact h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.social-media {
+    display: flex;
+    gap: 15px;
+}
+
+.social-media a {
+    display: inline-block;
+}
+
+.social-media img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-media img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+.footer-right {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+/* Responsivo para el pie de página */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+}
+

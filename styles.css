@@ -1,0 +1,334 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+}
+
+/* Navegación */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav .logo {
+    height: 50px;
+}
+
+/* Nombre del restaurante */
+.restaurant-name {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2.5em;
+    color: #333;
+    font-family: 'Brush Script MT', cursive;
+}
+
+/* Estilos del menú */
+.menu-section {
+    padding: 20px;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.menu-section h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.menu-category {
+    margin-bottom: 40px;
+}
+
+.menu-category h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.menu-items-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.menu-item {
+    width: 30%; /* Ajusta el tamaño de los elementos del menú */
+    margin: 10px 0;
+    text-align: center;
+}
+
+.menu-item img {
+    width: 80%; /* Ajusta el tamaño de las imágenes */
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .menu-item {
+        width: 90%; /* En pantallas pequeñas, los elementos ocupan más espacio */
+    }
+}
+
+/* Sección de empleados */
+.employees-container {
+    background-color: #e0e0e0;
+    padding: 40px;
+    margin: 30px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.employees-container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), transparent);
+    background-size: 50px 50px;
+    animation: moveBackground 30s linear infinite;
+}
+
+@keyframes moveBackground {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(100%, 100%);
+    }
+}
+
+.employees {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+}
+
+.employee {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.employee img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.employee img:hover {
+    transform: scale(1.1);
+}
+
+.employee h3 {
+    font-family: 'Times New Roman', serif;
+    font-size: 1.2em;
+    color: #333;
+    display: inline-block;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.italic-text {
+    font-style: italic;
+}
+
+
+/* Sección de servicios */
+.services {
+    padding: 40px;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.service h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.service p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.service-images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que las imágenes se envuelvan si no caben en una línea */
+}
+
+.service-images img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto hover para las imágenes */
+.service-images img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsivo para la sección de servicios */
+@media (max-width: 768px) {
+    .service {
+        flex-direction: column;
+    }
+    .service img {
+        max-width: 150px;
+    }
+}
+
+/* Estilos del carrusel */
+.swiper-container {
+    width: 100%;
+    height: 300px; /* Ajusta la altura según sea necesario */
+    margin: 20px auto;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Botones de navegación */
+.swiper-button-next, .swiper-button-prev {
+    display: none;
+}
+
+/* Paginación */
+.swiper-pagination {
+    display: none;
+}
+
+
+/* Pie de página */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 8px 8px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-content::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 20%, transparent 20%);
+    background-size: 50px 50px;
+    animation: rotateBackground 30s linear infinite;
+}
+
+@keyframes rotateBackground {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.contact h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.social-media {
+    display: flex;
+    gap: 15px;
+}
+
+.social-media a {
+    display: inline-block;
+}
+
+.social-media img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-media img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+.footer-right {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+/* Responsivo para el pie de página */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+}
+
